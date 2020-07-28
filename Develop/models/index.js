@@ -1,12 +1,21 @@
+// strict mode - does not permit the use of undeclared variables 
 'use strict';
 
+// npm file system that has pre built methods like forEach()
 var fs        = require('fs');
+// npm that makes it easier to create urls
 var path      = require('path');
+// prebuild ORM with template methods 
 var Sequelize = require('sequelize');
+
 var basename  = path.basename(module.filename);
+// returns an object containing the user environment 
 var env       = process.env.NODE_ENV || 'development';
+//connects server.js to the config.json page
 var config    = require(__dirname + '/../config/config.json')[env];
+// empty object (to be filled in later)
 var db        = {};
+
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
