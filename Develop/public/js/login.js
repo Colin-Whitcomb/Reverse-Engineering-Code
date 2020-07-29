@@ -8,10 +8,13 @@ $(document).ready(function() {
   loginForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
+      // collecting user email input
       email: emailInput.val().trim(),
+      // collecting user password input
       password: passwordInput.val().trim()
     };
 
+    // avoids empty email or password inputs
     if (!userData.email || !userData.password) {
       return;
     }
@@ -24,15 +27,22 @@ $(document).ready(function() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
+    // POST request
     $.post("/api/login", {
+      // send user email
       email: email,
+      // send user password
       password: password
     })
+      // afterwards... 
       .then(function() {
+        // send user to members page 
         window.location.replace("/members");
-        // If there's an error, log the error
+        
       })
+      // If there's an error... 
       .catch(function(err) {
+        // log the error
         console.log(err);
       });
   }
