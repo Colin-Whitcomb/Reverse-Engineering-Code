@@ -18,17 +18,23 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password
     })
+    // if email and password meet the criteria
       .then(function() {
+        // send them to the login page
         res.redirect(307, "/api/login");
       })
+      // if email or password did not meet criteria...
       .catch(function(err) {
+        // send err
         res.status(401).json(err);
       });
   });
 
-  // Route for logging user out
+  // If user chooses to log out
   app.get("/logout", function(req, res) {
+    // call the logout function
     req.logout();
+    // redirect to the first page
     res.redirect("/");
   });
 

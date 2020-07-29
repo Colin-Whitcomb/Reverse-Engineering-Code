@@ -7,7 +7,7 @@ var fs        = require('fs');
 var path      = require('path');
 // prebuild ORM with template methods 
 var Sequelize = require('sequelize');
-
+// current file
 var basename  = path.basename(module.filename);
 // returns an object containing the user environment 
 var env       = process.env.NODE_ENV || 'development';
