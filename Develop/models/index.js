@@ -16,7 +16,7 @@ var config    = require(__dirname + '/../config/config.json')[env];
 // empty object (to be filled in later)
 var db        = {};
 
-
+// gets route from config.json to know if to go into development or production
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -39,6 +39,8 @@ fs
     db[model.name] = model;
   });
 
+// Iterates over each model in the db and invokes its associate function (if it has one), 
+// presumably to setup any associations between models, foreign keys, cascades, etc.*
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
     db[modelName].associate(db);
@@ -48,4 +50,7 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// exports a variety of links to use sequelize and models
 module.exports = db;
+
+//  * https://stackoverflow.com/questions/32592189/code-explanation-fs-from-sequelize-express-example
