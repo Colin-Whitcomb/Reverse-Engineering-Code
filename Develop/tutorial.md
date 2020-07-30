@@ -8,17 +8,16 @@ App Preview
 </p>
 
 ## Introduction - UX Brief
-This app walks the user through a sign up and login function, which, only after verified, leads the user to a member page. This markdown file will walk through the code to describe how all peices work in conjunction.
+This app walks the user through a sign up and login function, which, only after verified, leads the user to a member page. This markdown file will walk through the code to describe how all peices work in conjunction. We reccomend reading through this overview <i>before</i> inspecting the code; however, please familiarize yourself with the comments in the code if questions persist. 
 
 ## Table of Contents
-
-* [Instructions - to Use](#instructions)
 
 * [Routes | Models ](#Server_Side)
 
 * [Config](#config)
 
 * [Errors](#errors)
+
 _______
 
 ### Client Side Components -  HTML & JS 
@@ -30,7 +29,7 @@ _______
 
 The codebase contains three HTML pages held in the public folder. These files hold the skeletal structure for different pages to be displayed to the user. Each page has a corresponding .js file that executes all required client side functions including listening for on(submit) functions that send api requests (POST & GET) to the server (example below). 
 <p align="center">
-    <img src="./images/ss1.png" width="385" />
+    <img src="./images/ss1.png" width="425" />
 </p>
 
 __________
@@ -39,7 +38,7 @@ __________
 
 #### Routes | Models 
 
-Since this file structure follows the MVC paradigm, the use of routes and models are to be expected. The two routes.js files serve the purpose of controller between the user and server. The route api-routes is listening to all api requests from the server and fulfilling those requests by connecting to the models/database and responding to the clients' specified requests (i.e. api/signup sends a POST request to add email and password info to the database). The html-routes.js file does the work of handling all html requests and renders the appropriate html page when requested via GET requests. 
+Since this file structure follows the <u>MVC</u> paradigm, the use of routes and models are to be expected. The two routes.js files act the role of controller between the client and server. The route api-routes is listening to all api requests from the server and fulfilling those requests by connecting to the models/database and responding to the clients' specified requests (i.e. api/signup sends a POST request to add email and password info to the database). The html-routes.js file does the work of handling all html requests and renders the appropriate html page when requested via GET requests. 
 
 Held in the models folder, the index.js file works as an intermediary between the server and the html routes that allows the html routes to change pages. The second file, the user.js, provides a model for a user that includes an email and password with specific validation requirements. 
 
@@ -70,10 +69,4 @@ If the user incorrectly inputs information, for either the login or signup page,
 
 _________
 
-## Instructions 
-- Fork the Repo 
-- Copy / Paste / Run the info in employeeTracker.sql into your personal mySQL workbench
-- Once in a code editor, npm install in your command line
-- run 'node app.js' as a CLI 
-- continue through prompts as desired
 
