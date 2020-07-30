@@ -8,7 +8,7 @@ App Preview
 </p>
 
 ## Introduction - UX Brief
-This app walks the user through a sign up and login function, which, only after verified, leads the user to a member page. This markdown file will walk through the code to describe how all peices work in conjunction. We reccomend reading through this overview <i>before</i> inspecting the code; however, please familiarize yourself with the comments in the code if questions persist. 
+This app walks the user through a sign up and login function, which, only after verified, leads the user to a member page. This markdown file will walk through the code to describe how all peices work in conjunction. We reccomend reading through this overview <b>before</b> inspecting the code; however, please familiarize yourself with the comments in the code if questions persist. 
 
 ## Table of Contents
 
