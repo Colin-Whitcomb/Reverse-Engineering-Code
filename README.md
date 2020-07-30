@@ -20,9 +20,9 @@ This app, let's call if "Loggo" for fun, walks the user through a sign up and lo
 
 ## Development Suggestions
 
-After observing how "Loggo" works, I came across a few areas that I would suggest improvements. The main issue is that when initially loading the page, the user is prompted with the sign up page. If the user already has an existing account, they can then follow the link to the login page. My suggestion would be to switch the order of the sign-up and login pages. By making the login page the default, it will cater to existing members ("Loggers" for fun) by making it easier/faster to login. 
+After observing how "Loggo" works, I came across a few problems. The main issue is that when initially loading the page, the user is prompted with the sign up page. If the user already has an existing account, they can then follow the link to the login page. My suggestion would be to switch the order of the sign-up and login pages. By making the login page the default, it will cater to existing members ("Loggers" for fun) by making it easier and faster to login. 
 
-<i>"Loggers" just want to login!</i>  
+<i>"Loggers" just want to log-in!</i>  
 ______________
 
 ## Technologies Used
